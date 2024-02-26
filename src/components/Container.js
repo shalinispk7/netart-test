@@ -17,7 +17,13 @@ const Container = () => {
       </div>
       {/* award */}
       <div className='row'>
-        <div className='col-lg-4 col-md-12 col-sm-12 w-25'>
+        <div
+          className={`col-lg-4 col-md-12 col-sm-12  ${
+            window.innerWidth > 768
+              ? 'w-25'
+              : 'w-50 d-flex justify-content-center'
+          }`}
+        >
           <img src={award} alt='award' className='w-100' />
         </div>
         <div className='col-lg-8 col-md-12 col-sm-12'>
@@ -38,7 +44,7 @@ const Container = () => {
               with IoT enabled control panel.
             </li>
           </ul>
-          <div className='w-75'>
+          <div className={window.innerWidth > 768 ? 'w-75' : 'w-100'}>
             <img src={person} alt='person' className='w-100' />
           </div>
           <p>
@@ -60,7 +66,7 @@ const Container = () => {
             POWER FOR THE NATION.
           </p>
 
-          <div className='w-75'>
+          <div className={window.innerWidth > 768 ? 'w-75' : 'w-100'}>
             <img src={pumps} alt='pumps' className='w-100' />
           </div>
           <p>
