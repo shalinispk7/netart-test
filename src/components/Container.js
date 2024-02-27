@@ -8,15 +8,19 @@ const Container = () => {
   return (
     <>
       {/* logo */}
-      <div className=' row'>
-        <div className='col-lg-12 col-md-12 col-sm-12'>
-          <div className='w-25'>
+      <div className=' row my-2'>
+        <div className='col-lg-12 d-flex justify-content-center col-md-12 col-sm-12'>
+          <div className={window.innerWidth > 768 ? 'w-25' : 'w-75'}>
             <img src={logo} alt='logo' className='w-100 ' />
           </div>
         </div>
       </div>
       {/* award */}
-      <div className='row'>
+      <div
+        className={`row ${
+          window.innerWidth > 768 ? true : 'd-flex justify-content-center'
+        }`}
+      >
         <div
           className={`col-lg-4 col-md-12 col-sm-12  ${
             window.innerWidth > 768
@@ -27,10 +31,10 @@ const Container = () => {
           <img src={award} alt='award' className='w-100' />
         </div>
         <div className='col-lg-8 col-md-12 col-sm-12'>
-          <h2 className='fs-5'>
+          <h3 className='fs-5'>
             C.R.I. PUMPS WINS THE NATIONAL ENERGY CONSERVATION AWARD 2018 for
             the 4th time.
-          </h2>
+          </h3>
           <ul>
             <li>
               C.R.I.'s energy efficient products are well recognized by various
@@ -58,7 +62,7 @@ const Container = () => {
       </div>
 
       {/* pumps */}
-      <div className='row'>
+      <div className='row mt-4'>
         <div className='col-lg-12 d-flex align-items-center flex-column'>
           <p className='fs-6'>
             INSTALLED OVER 10 LAKHS STAR RATED PUMPSETS ACROSS THE COUNTRY

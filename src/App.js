@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 const App = () => {
   return (
-    <div className='container'>
+    <div className='container '>
       <Container />
       <Footer />
     </div>
