@@ -1,16 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from '../assets/logo.png'
 import award from '../assets/1.png'
 import person from '../assets/2.png'
 import pumps from '../assets/3.png'
 
 const Container = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth)
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
   return (
     <>
       {/* logo */}
       <div className=' row my-2'>
         <div className='col-lg-12 d-flex justify-content-center col-md-12 col-sm-12'>
-          <div className={window.innerWidth > 768 ? 'w-25' : 'w-75'}>
+          <div className={windowWidth > 768 ? 'w-25' : 'w-75'}>
             <img src={logo} alt='logo' className='w-100 ' />
           </div>
         </div>
@@ -18,14 +31,12 @@ const Container = () => {
       {/* award */}
       <div
         className={`row ${
-          window.innerWidth > 768 ? true : 'd-flex justify-content-center'
+          windowWidth > 768 ? '' : 'd-flex justify-content-center'
         }`}
       >
         <div
           className={`col-lg-4 col-md-12 col-sm-12  ${
-            window.innerWidth > 768
-              ? 'w-25'
-              : 'w-50 d-flex justify-content-center'
+            windowWidth > 768 ? 'w-25' : 'w-50 d-flex justify-content-center'
           }`}
         >
           <img src={award} alt='award' className='w-100' />
