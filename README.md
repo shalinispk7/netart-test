@@ -1,1 +1,1 @@
-Live URL: https://gorgeous-babka-12179d.netlify.app/
+Live URL: https://netart-cri-fluid.netlify.app/
