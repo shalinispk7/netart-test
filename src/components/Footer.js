@@ -11,8 +11,8 @@ const Footer = () => {
         <p>
           CHEMICALS & PROCESS
           <span className='border-end border-danger border-2 ps-1'></span> POWER
-          <span className='border-end border-danger border-2 ps-1'></span>
-          WATER & WASTE WATER
+          <span className='border-end border-danger border-2 ps-1'></span> WATER
+          & WASTE WATER
           <span className='border-end border-danger border-2 ps-1'></span> OILS
           & GAS<span className='border-end border-danger border-2 ps-1'></span>{' '}
           PHARMA<span className='border-end border-danger border-2 ps-1'></span>{' '}
@@ -26,8 +26,8 @@ const Footer = () => {
           <span className='border-end border-danger border-2 ps-1'></span>{' '}
           BUILDING
           <span className='border-end border-danger border-2 ps-1'></span> HVAC
-          <span className='border-end border-danger border-2 ps-1'></span>
-          FIRE FIGHTING
+          <span className='border-end border-danger border-2 ps-1'></span> FIRE
+          FIGHTING
           <span className='border-end border-danger border-2 ps-1'></span>{' '}
           AGRICULTURE & RESIDENTIAL
         </p>
